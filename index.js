@@ -65,6 +65,11 @@ app.get("/getstudent/:id",async(req,res)=>{
     let student = await studentModel.findOne({_id:req.params.id})
     res.json(student)
 })
+app.get("/getemployee/:id",async(req,res)=>{
+    // console.log(req.params)
+    let employee = await employeeModel.findOne({_id:req.params.id})
+    res.json(employee)
+})
 
 app.listen(3000, () => {
     console.log("Listening to the port 3000....")
