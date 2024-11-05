@@ -3,7 +3,7 @@ const enquiryModel = require("../../models/enquiry")
 const createEnquiry = async (req, res) => {
     console.log(req.body)
     let enquiry = await enquiryModel.findOne({ email: req.body.email })
-    console.log(enquiry)
+    // console.log(enquiry)
     let newEnquiry = true
     if (enquiry) {
         newEnquiry = false
@@ -12,7 +12,7 @@ const createEnquiry = async (req, res) => {
     else {
         newEnquiry = true
         let enquiry = await enquiryModel.create({ ...req.body })
-        console.log(enquiry)
+        // console.log(enquiry)
         // res.json({ message: "Succesfully Recieved Your Request.." })
     }
     res.json({ newEnquiry})

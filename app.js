@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(express.static("assets"))
 // app.use(multer({dest:"./routes"}))
-app.use(cors({ origin: "http://localhost:5173",credentials:true }))
+app.use(cors({ origin: ["http://localhost:5173",'*'],credentials:true }))
 app.use(session({
     resave: false,
     saveUninitialized: false,

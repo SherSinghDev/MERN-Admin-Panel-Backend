@@ -6,8 +6,17 @@ const employeesRoute = require("./routes/employees")
 const employeeModel = require("./models/employees")
 const enquiryRoute = require("./routes/enquiry")
 const bcrypt = require("bcrypt")
+require('dotenv').config();
 
 connection()
+
+
+// username - shersingh741730
+// password - felisleo@mongo
+
+// cluster - mongodb+srv://shersingh741730:felisleo@mongo@cluster0.g9i9a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
 
 app.use("/students", studentsRoute)
 app.use("/employees", employeesRoute)
