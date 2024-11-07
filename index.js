@@ -80,6 +80,7 @@ app.get("/getemployee/:id",async(req,res)=>{
     res.json(employee)
 })
 
-app.listen(process.env.PORT, () => {
+const port = 3000
+app.listen(port, () => {
     console.log("Listening to the port 3000....")
 })
